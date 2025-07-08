@@ -5,9 +5,9 @@ Notebook em Python para monitorar o preço do token BAT (Basic Attention Token) 
 ## 🔧 Funcionalidades
 
 - Consulta o preço atual do BAT em BRL usando a API do CoinGecko
-- Calcula o valor do saldo do usuário em reais
-- Mostra gráfico da variação de preço nos últimos 30 dias
-- Envia alertas automáticos via bot do Telegram quando o preço ultrapassa limites definidos
+- Mostra gráfico da variação dos últimos 30 dias
+- Calcula o valor estimado do saldo do usuário
+- Envia alertas automáticos via Telegram se o preço ultrapassar limites definidos
 
 ## 📦 Bibliotecas utilizadas
 
@@ -17,9 +17,9 @@ Notebook em Python para monitorar o preço do token BAT (Basic Attention Token) 
 
 ## ▶️ Como usar
 
-1. Configure o arquivo `telegram_alert.py` com seu token e chat_id
-2. Execute o notebook `bat_tracker.ipynb`
-3. O alerta será enviado ao Telegram se o preço do BAT ultrapassar os limites definidos
+1. Abra e execute o notebook `bat_tracker.ipynb`
+2. No início do notebook, configure seu token e chat_id do Telegram
+3. O notebook enviará alertas automáticos quando os limites forem atingidos
 
 ---
 
