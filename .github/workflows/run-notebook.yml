@@ -5,6 +5,10 @@ on:
     - cron: '0 12 * * *'
   workflow_dispatch:
 
+env:
+  TOKEN: ${{ secrets.token }}
+  CHAT_ID: ${{ secrets.chat_id }}
+  
 jobs:
   run-bat-tracker:
     runs-on: ubuntu-latest
