@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   API_TOKEN: ${{ secrets.API_TOKEN }}
   CHAT_ID: ${{ secrets.CHAT_ID }}
   MEU_SALDO_BAT: ${{ secrets.MEU_SALDO_BAT }}
