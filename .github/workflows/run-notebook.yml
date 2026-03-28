@@ -8,7 +8,10 @@ on:
 env:
   TOKEN: ${{ secrets.API_TOKEN }}
   CHAT_ID: ${{ secrets.CHAT_ID }}
-  
+  MEU_SALDO_BAT: ${{ secrets.MEU_SALDO_BAT }}
+  PRECO_MINIMO_BAT: ${{ secrets.PRECO_MINIMO_BAT }}
+  PRECO_MAXIMO_BAT: ${{ secrets.PRECO_MAXIMO_BAT }}
+
 jobs:
   run-bat-tracker:
     runs-on: ubuntu-latest
@@ -29,5 +32,12 @@ jobs:
           pip install jupyter
 
       - name: Executar notebook
+        env:
+          GITHUB_ACTIONS: "true"
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          MEU_SALDO_BAT: ${{ secrets.MEU_SALDO_BAT }}
+          PRECO_MINIMO_BAT: ${{ secrets.PRECO_MINIMO_BAT }}
+          PRECO_MAXIMO_BAT: ${{ secrets.PRECO_MAXIMO_BAT }}
         run: |
           jupyter nbconvert --to notebook --execute bat_tracker.ipynb --output executed_bat_tracker.ipynb
